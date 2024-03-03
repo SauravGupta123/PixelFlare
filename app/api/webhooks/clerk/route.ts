@@ -5,8 +5,6 @@ import { headers } from "next/headers";
 import { NextResponse } from "next/server";
 import { Webhook } from "svix";
 
-
-//server actions 
 import { createUser, deleteUser, updateUser } from "@/lib/actions/user.actions";
 
 export async function POST(req: Request) {
@@ -96,7 +94,7 @@ export async function POST(req: Request) {
       username: username!,
       photo: image_url,
     };
-
+    console.log("updated");
     const updatedUser = await updateUser(id, user);
 
     return NextResponse.json({ message: "OK", user: updatedUser });

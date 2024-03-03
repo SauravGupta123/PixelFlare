@@ -23,7 +23,7 @@ console.log("aaa");
   cached.promise = 
     cached.promise || 
     mongoose.connect(MONGODB_URL, { 
-      dbName: 'imaginify', bufferCommands: false 
+      dbName: 'pixelFlare', bufferCommands: false 
     })
 
   cached.conn = await cached.promise;

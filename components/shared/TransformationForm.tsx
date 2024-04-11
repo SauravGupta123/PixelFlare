@@ -27,7 +27,7 @@ import { aspectRatioOptions, creditFee, defaultValues, transformationTypes } fro
 import { CustomField } from "./CustomField"
 import { useEffect, useState, useTransition } from "react"
 import { AspectRatioKey, debounce, deepMergeObjects } from "@/lib/utils"
-import MediaUploader from "./MediaUploader"
+import Uploader from "./Uploader"
 import TransformedImage from "./TransformedImage"
 import { updateCredits } from "@/lib/actions/user.actions"
 import { getCldImageUrl } from "next-cloudinary"
@@ -104,7 +104,6 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
           if(newImage) {
             form.reset()
             setImage(data)
-            alert("Image added To database successFully");
             router.push(`/transformations/${newImage._id}`)
           }
         } catch (error) {
@@ -124,7 +123,6 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
           })
 
           if(updatedImage) {
-            alert("Image added To database successFully");
             router.push(`/transformations/${updatedImage._id}`)
           }
         } catch (error) {
@@ -275,7 +273,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
             name="publicId"
             className="flex size-full flex-col"
             render={({ field }) => (
-              <MediaUploader 
+              <Uploader 
                 onValueChange={field.onChange}
                 setImage={setImage}
                 publicId={field.value}

@@ -107,7 +107,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
             router.push(`/transformations/${newImage._id}`)
           }
         } catch (error) {
-          console.log(error);
+          console.log("error from transformation form:",error);
         }
       }
 
@@ -126,7 +126,7 @@ const TransformationForm = ({ action, data = null, userId, type, creditBalance, 
             router.push(`/transformations/${updatedImage._id}`)
           }
         } catch (error) {
-          console.log(error);
+          console.log("error from transformation form:",error);
         }
       }
     }

@@ -24,7 +24,7 @@ const Uploader = ({
   const { toast } = useToast()
 
   const onUploadSuccessHandler = (result: any) => {
-  
+    console.log({publicId})
 
     toast({
       title: 'Image uploaded successfully',
@@ -45,7 +45,7 @@ const Uploader = ({
 
   return (
     <CldUploadWidget
-      uploadPreset="jsm_imaginify"
+      uploadPreset="pixelFlare"
       options={{
         multiple: false,
         resourceType: "image",

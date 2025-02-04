@@ -1,21 +1,19 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
-import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ClerkProvider } from "@clerk/nextjs";
-import { dark, neobrutalism, shadesOfPurple } from '@clerk/themes';
 
-//global layout across all routes
+import "./globals.css";
 
 const IBMPlex = IBM_Plex_Sans({ 
   subsets: ["latin"],
-  weight:['400','500','600',"700"],
-  variable:'--font-ibm-plex'
- });
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-ibm-plex'
+});
 
 export const metadata: Metadata = {
-  title: "Imagnify",
-  description: "AI powered Image Generator",
+  title: "Imaginify",
+  description: "AI-powered image generator",
 };
 
 export default function RootLayout({
@@ -24,21 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider
-    appearance={{
-   
-      variables: { colorPrimary: 'red' },
-      signIn: { 
-        
-        variables: { colorPrimary: 'blue' }
-      }
-    }}
-  >
+    <ClerkProvider appearance={{
+      variables: { colorPrimary: '#624cf5' }
+    }}>
       <html lang="en">
-        <head>
-          {/* You can import your IBM Plex Sans font here */}
-        </head>
-        <body className={cn("font-IBMPlex antialiased")}>
+        <body className={cn("font-IBMPlex antialiased", IBMPlex.variable)}>
           {children}
         </body>
       </html>

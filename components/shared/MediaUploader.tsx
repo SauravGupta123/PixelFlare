@@ -14,7 +14,7 @@ type MediaUploaderProps = {
   type: string;
 }
 
-const Uploader = ({
+const MediaUploader = ({
   onValueChange,
   setImage,
   image,
@@ -24,7 +24,15 @@ const Uploader = ({
   const { toast } = useToast()
 
   const onUploadSuccessHandler = (result: any) => {
-  
+    setImage((prevState: any) => ({
+      ...prevState,
+      publicId: result?.info?.public_id,
+      width: result?.info?.width,
+      height: result?.info?.height,
+      secureURL: result?.info?.secure_url
+    }))
+
+    onValueChange(result?.info?.public_id)
 
     toast({
       title: 'Image uploaded successfully',
@@ -92,4 +100,4 @@ const Uploader = ({
   )
 }
 
-export default Uploader
+export default MediaUploader

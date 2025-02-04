@@ -129,4 +129,4 @@ This project is licensed under the MIT License. Feel free to modify and distribu
 
 ### 🚀 Connect with Me
 
-For any queries, feature requests, or contributions, feel free to reach out via GitHub or LinkedIn!
+For any queries, feature requests, or contributions, feel free to reach out via GitHub or [Linkedin](https://www.linkedin.com/in/srv-gupta/)!

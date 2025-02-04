@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Pixel Flare - AI-Powered Image Editor
+=====================================
 
-## Getting Started
+Pixel Flare is a cloud-based AI-powered image editor designed to provide advanced image editing features such as restoration, generative fill, and enhancement. Built with the MERN stack, Cloudinary API, and TypeScript, it offers a seamless user experience with a secure payment system powered by Stripe.
 
-First, run the development server:
+Table of Contents
+-----------------
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Tech Stack](#tech-stack)
+  - [Installation Guide](#installation-guide)
+- [Usage](#usage)  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Introduction
+------------
+
+Pixel Flare is a SaaS-based AI image editing platform that allows users to enhance, restore, and edit their images effortlessly. With AI-driven functionalities and a robust payment system, users can access premium features and enhance their experience. Whether you're a professional editor or a casual user, Pixel Flare simplifies complex image editing with cutting-edge AI technology.
+
+Features
+--------
+
+-   **AI-Powered Image Restoration** - Enhance and restore old or low-quality images with AI.
+
+-   **Generative Fill** - Automatically fill missing parts of an image using advanced AI models.
+
+-   **Cloud Storage** - Securely store and manage images using Cloudinary API.
+
+-   **Secure Payments** - Integrated Stripe payment system to manage subscriptions and premium features.
+
+-   **User Authentication** - Seamless login and authentication using Clerk.
+
+-   **Real-Time Editing** - Experience instant AI-based image modifications.
+
+-   **Multi-Format Support** - Upload and process images in various formats.
+
+Getting Started
+---------------
+
+To run Pixel Flare locally or deploy it, follow the steps below.
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+-   Node.js (v16+)
+
+-   MongoDB
+
+-   Git
+
+-   Cloudinary API Key
+
+-   Stripe API Key
+
+-   Clerk API Key
+
+Tech Stack
+----------
+
+Pixel Flare is built using the following technologies:
+
+-   **Frontend:** Next.js 14, React, TypeScript
+
+-   **Backend:** Node.js, Express.js, MongoDB
+
+-   **Cloud Services:** Cloudinary (for image storage and AI features)
+
+-   **Authentication:** Clerk
+
+-   **Payments:** Stripe
+
+Installation Guide
+------------------
+
+Follow these steps to set up Pixel Flare on your local machine.
+
+### Clone the Repository
+
+```
+git clone https://github.com/yourusername/pixel-flare.git
+cd pixel-flare
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Configure Environment Variables
 
-## Learn More
+Create a `.env` file in the root directory and add the following:
 
-To learn more about Next.js, take a look at the following resources:
+```
+MONGO_URI=your_mongodb_connection_string
+CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+STRIPE_SECRET_KEY=your_stripe_secret_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Start the Development Server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm run dev
+```
 
-## Deploy on Vercel
+Your application should now be running at `http://localhost:3000`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Usage
+-----
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   **Upload an Image**: Users can upload images directly from their device.
+
+-   **Apply AI Edits**: Use AI-powered tools to restore or enhance images.
+
+-   **Save & Download**: Save edited images to Cloudinary and download them.
+
+-   **Upgrade to Premium**: Unlock advanced features through Stripe-powered payments.
+
+License
+-------
+
+This project is licensed under the MIT License. Feel free to modify and distribute it as per the terms of the license.
+
+* * * * *
+
+### 🚀 Connect with Me
+
+For any queries, feature requests, or contributions, feel free to reach out via GitHub or LinkedIn!

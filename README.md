@@ -34,6 +34,14 @@ Features
 
 -   **Multi-Format Support** - Upload and process images in various formats.
 
+Demo Video
+----------
+
+
+https://github.com/user-attachments/assets/7d8dd91f-f22d-4e20-933d-4e01fef37888
+
+
+
 Getting Started
 ---------------
 
